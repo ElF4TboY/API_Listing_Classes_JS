@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "target": "ESNext",
+    "strict": true
+  },
+  "include": ["src/**/*", "index.ts"]
+}
+
+// npx tsc --init -> initialise le JSON tsConfig
