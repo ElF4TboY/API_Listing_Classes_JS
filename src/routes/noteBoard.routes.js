@@ -1,4 +1,5 @@
 import express from "express";
+
 import { NoteBoard } from "../models/noteBoard.js";
 
 const router = express.Router();
