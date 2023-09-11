@@ -7,6 +7,7 @@ import { connectDB } from "./src/services/mongoose.js";
 import classrooms from "./src/routes/classrooms.routes.js";
 import noteBoard from "./src/routes/noteBoard.routes.js";
 import students from "./src/routes/students.routes.js";
+import home from "./src/routes/home.routes.js";
 
 const app = express();
 const port = 3000;
@@ -16,19 +17,18 @@ app.use(express.json());
 
 // Views engine
 const dirName = dirname(fileURLToPath(import.meta.url));
-console.log(dirName);
+
+app.set("view engine", "ejs"); // set the view engine extension
 app.set("views", join(dirName, "/src/views")); // set path to folder views
-app.set("view engine", "pug"); // set the view engine extension
+app.set("/public", join(dirName, "/src/public"));
 
-// return HTML
-app.get("/", (req, res) => {
-  res.render("index");
-});
-
-// Routes of API
+// Routes
+// API
 app.use("/classrooms", classrooms);
 app.use("/noteBoard", noteBoard);
 app.use("/students", students);
+// render HTML
+app.use(home);
 
 app.listen(port, () => {
   console.log(`Server running on : http://localhost:${port}`);
