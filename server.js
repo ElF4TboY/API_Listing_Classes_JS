@@ -11,6 +11,8 @@ const port = 3000;
 
 connectDB().catch((err) => console.log(err));
 
+app.use(express.json());
+
 app.use(routing);
 
 app.listen(port, () => {
