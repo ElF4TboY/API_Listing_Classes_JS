@@ -20,8 +20,6 @@ pour les models
       -> pas d'utilité pour ici, j'utiliserai l'id de la classe en foreign key student;
     name: { type: String, required: true },
 -----------------------------------------------------------------------------------
-Gérer les erreurs avec les bons status
------------------------------------------------------------------------------------
 pour les routes, trop de répétitions. Voir pour créer des classe
 
 https://chtgupta.medium.com/dynamic-routing-and-schema-plugins-using-mongoose-typescript-and-express-dd01afd8cd3c
