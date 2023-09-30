@@ -1,16 +1,9 @@
 import { NoteBoard } from "../models/noteBoard.js";
 import { createOne } from "../queries/createOne.js";
-import { deleteOne } from "../queries/deleteOne.js";
 import { getAll } from "../queries/getAll.js";
 import { getOne } from "../queries/getOne.js";
-import {
-  queryCreateNoteBoard,
-  queryDeleteOneNoteBoard,
-  queryReadAllNoteBoard,
-  queryReadOneNoteBoard,
-  queryUpdateOneNoteBoard,
-} from "../queries/noteBoard.queries.js";
 import { updateOne } from "../queries/updateOne.js";
+import { deleteOne } from "../queries/deleteOne.js";
 
 const errorMessage = "Aucun élève n'a été trouvé.";
 
