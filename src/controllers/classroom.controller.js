@@ -4,7 +4,6 @@ import { getAll } from "../queries/getAll.js";
 import { deleteOne } from "../queries/deleteOne.js";
 
 export const createClassroom = async (req, res) => {
-  console.log(req.body);
   try {
     const newClassroom = await createOne(Classroom, req.body);
     res.status(201).send({
