@@ -1,8 +1,6 @@
-import { join, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
 import express from "express";
 
-import { connectDB } from "./src/services/mongoose.js";
+import { connectDB } from "./src/database/mongoose.js";
 
 import routing from "./src/routes/index.routes.js";
 
